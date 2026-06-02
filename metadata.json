@@ -1,0 +1,6 @@
+{
+  "name": "SkillSphere",
+  "description": "Intelligent Hyperlocal Freelance Ecosystem connecting clients and freelancers with smart AI matching.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

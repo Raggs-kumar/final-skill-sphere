@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Share Tech Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer utilities {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(22, 101, 52, 0.12);
+    box-shadow: 0 4px 20px rgba(22, 101, 52, 0.04);
+  }
+  .glass-card-light {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(22, 101, 52, 0.08);
+  }
+  .glow-green {
+    box-shadow: 0 4px 14px rgba(22, 101, 52, 0.08);
+  }
+  .text-glow-green {
+    text-shadow: none;
+  }
+  .glow-red {
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.06);
+  }
+}
+
+/* Custom elegant light theme with high-contrast green and white */
+body {
+  background-color: #f7faf7;
+  color: #112d18;
+  font-family: var(--font-sans);
+  background-image: 
+    linear-gradient(rgba(0, 150, 60, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 150, 60, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-attachment: fixed;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::after {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: transparent;
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* Custom scanline animation disabled but placeholder left harmless */
+.scanline-effect {
+  display: none;
+}
+
+/* Scrollbar styles to match modern leaf theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f7faf7;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 150, 60, 0.2);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 150, 60, 0.4);
+}
+
+
